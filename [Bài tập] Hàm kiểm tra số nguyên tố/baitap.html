@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('test')
+        let x = Array()
+        let y = Array()
+        
+        function songuyento(so) {
+            
+            for (let i = 2 ; i < 100; i++) {
+                let check = true
+
+                x.push(i);
+                for (let j = 2 ; j < i ; j++) {
+                    if (i % j == 0) {
+                        check = false
+                        break;
+                    }
+                }
+                if (check) {
+                    y.push(i)
+                }
+            
+            }
+        
+            
+            for (let z = 0 ; z < y.length; z++) {
+                if (so == y[z]) {
+                    return true
+                }
+
+            }
+            return false
+            
+        }
+        let socannhap = +prompt('nhập số cần kiểm tra')
+        alert(songuyento(socannhap))
+        console.log(x)
+        console.log(y)
+        
+    </script>
+</body>
+</html>
