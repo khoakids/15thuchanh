@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="giatri1">Nhập giá trị 1</label>
+    <input type="text" id="giatri1">
+    <br>
+    <label for="giatri2">Nhập giá trị 2</label>
+    <input type="text" id="giatri2">
+    <br>
+    <button type="button" onclick="tinh()">xác nhận</button>
+    <script>
+        
+        
+        
+        function tinh() {
+            let a = +document.getElementById('giatri1').value;
+            let b = +document.getElementById('giatri2').value;
+            let tong;
+            if (a > b) {
+                document.write(`số ${a} lớn hơn số ${b}`)
+               
+            } else {
+                tong = a + b ;
+                document.write(`tổng là ${tong}`);
+            }
+        }
+    </script>
+</body>
+</html>

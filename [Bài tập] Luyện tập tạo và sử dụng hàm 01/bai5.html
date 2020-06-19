@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="tenngoisao"></label>
+    <input type="text" id="tenngoisao">
+    <button type="button" onclick="xacnhan()">Xác nhận</button>
+    <div id="hienthi"></div>
+    <script>
+        function xacnhan() {
+        let x = document.getElementById('tenngoisao').value;
+        let y;
+        let mang1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let mang2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (let i = 0 ; i < mang1.length ; i++) {
+            if (x === mang1[i] ) {
+                y = mang2[i];
+                document.getElementById('hienthi').innerHTML = y;
+                break;
+            } else {
+                document.getElementById('hienthi').innerHTML = 'không có trong các ngôi sao';
+            }
+        }
+        }
+    </script>
+</body>
+</html>
